@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaHaus — Guía de marca</title>
+  <meta name="description" content="Guía de marca de NovaHaus: logotipo, construcción del ícono, paleta de color y reglas de uso.">
+
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#131210">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <img class="hero-lockup" src="assets/logo/logo-primary-dark.svg" alt="NOVAHAUS — Arquitectura · Interiorismo" width="470" height="128">
+      <p class="hero-tagline">Guía de marca — versión 1.0</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. Construcción del ícono -->
+    <section class="section" aria-labelledby="h-construccion">
+      <div class="wrap">
+        <h2 id="h-construccion">Construcción del ícono</h2>
+        <p class="section-intro">
+          El monograma nace de dos barras verticales unidas por una diagonal,
+          contenidas en un marco cuadrado con esquinas ligeramente redondeadas.
+          Toda proporción está definida como porcentaje del lado del ícono, para
+          que la construcción se mantenga idéntica en cualquier tamaño.
+        </p>
+
+        <div class="construction">
+          <svg class="construction-svg" viewBox="0 0 100 100" role="img" aria-label="Diagrama de construcción del monograma NovaHaus con líneas guía">
+            <rect x="0" y="0" width="100" height="100" rx="8" fill="#131210"/>
+            <rect x="18" y="18" width="64" height="64" fill="none" stroke="#C7A468" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.6"/>
+            <path d="M18,18 H30 V82 H18 Z M30,18 L42,18 L70,82 L58,82 Z M70,18 H82 V82 H70 Z" fill="#C7A468"/>
+            <path d="M0,16 A8,8 0 0 1 8,0" fill="none" stroke="#F2EDE4" stroke-width="0.6" opacity="0.85"/>
+            <g stroke="#F2EDE4" stroke-width="0.5" opacity="0.85">
+              <line x1="18" y1="90" x2="30" y2="90"/>
+              <line x1="18" y1="88" x2="18" y2="92"/>
+              <line x1="30" y1="88" x2="30" y2="92"/>
+            </g>
+          </svg>
+
+          <ul class="construction-legend">
+            <li><span class="dot dot--gold"></span> Margen interior — <strong>18%</strong> del lado, en los cuatro costados</li>
+            <li><span class="dot dot--cream"></span> Grosor de cada trazo — <strong>12%</strong> del lado</li>
+            <li><span class="dot dot--cream"></span> Radio de esquina del marco — <strong>8%</strong> del lado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Variantes del logo -->
+    <section class="section section--alt" aria-labelledby="h-variantes">
+      <div class="wrap">
+        <h2 id="h-variantes">Variantes del logotipo</h2>
+        <p class="section-intro">
+          Seis versiones cubren los usos principales de la marca. Descarga el
+          SVG directamente — son archivos vectoriales editables, no imágenes
+          rasterizadas.
+        </p>
+
+        <div class="variants-grid">
+
+          <figure class="variant-card variant-card--dark">
+            <div class="variant-preview">
+              <img src="assets/logo/logo-primary-dark.svg" alt="Logo NovaHaus, versión primaria para fondo oscuro" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-primary-dark.svg</code>
+              <span class="variant-desc">Lockup completo, para fondos oscuros</span>
+              <a class="btn-download" href="assets/logo/logo-primary-dark.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+          <figure class="variant-card variant-card--light">
+            <div class="variant-preview">
+              <img src="assets/logo/logo-primary-light.svg" alt="Logo NovaHaus, versión primaria para fondo claro" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-primary-light.svg</code>
+              <span class="variant-desc">Lockup completo, para fondos claros</span>
+              <a class="btn-download" href="assets/logo/logo-primary-light.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+          <figure class="variant-card variant-card--dark">
+            <div class="variant-preview variant-preview--icon">
+              <img src="assets/logo/logo-icon-only.svg" alt="Ícono NovaHaus, solo monograma" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-icon-only.svg</code>
+              <span class="variant-desc">Solo el monograma — favicon / avatar</span>
+              <a class="btn-download" href="assets/logo/logo-icon-only.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+          <figure class="variant-card variant-card--dark">
+            <div class="variant-preview">
+              <img src="assets/logo/logo-compact.svg" alt="Logo NovaHaus compacto, sin subtítulo" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-compact.svg</code>
+              <span class="variant-desc">Ícono + wordmark, sin subtítulo — footer, firma de correo</span>
+              <a class="btn-download" href="assets/logo/logo-compact.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+          <figure class="variant-card variant-card--dark">
+            <div class="variant-preview">
+              <img src="assets/logo/logo-monochrome-white.svg" alt="Logo NovaHaus monocromático blanco" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-monochrome-white.svg</code>
+              <span class="variant-desc">Un color, blanco — superposición sobre fotos o fondos de color</span>
+              <a class="btn-download" href="assets/logo/logo-monochrome-white.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+          <figure class="variant-card variant-card--light">
+            <div class="variant-preview">
+              <img src="assets/logo/logo-monochrome-black.svg" alt="Logo NovaHaus monocromático negro" loading="lazy">
+            </div>
+            <figcaption>
+              <code>logo-monochrome-black.svg</code>
+              <span class="variant-desc">Un color, negro — impresión a una tinta</span>
+              <a class="btn-download" href="assets/logo/logo-monochrome-black.svg" download>Descargar SVG</a>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Paleta de color -->
+    <section class="section" aria-labelledby="h-paleta">
+      <div class="wrap">
+        <h2 id="h-paleta">Paleta de color</h2>
+        <p class="section-intro">Haz clic en un color para copiar su código hex.</p>
+
+        <div class="swatch-grid">
+          <button class="swatch" type="button" data-hex="#131210" style="background:#131210; color:#F2EDE4;">
+            <span class="swatch-name">Fondo oscuro</span>
+            <span class="swatch-hex">#131210</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#C7A468" style="background:#C7A468; color:#131210;">
+            <span class="swatch-name">Acento dorado (sobre oscuro)</span>
+            <span class="swatch-hex">#C7A468</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#F2EDE4" style="background:#F2EDE4; color:#131210;">
+            <span class="swatch-name">Texto sobre oscuro</span>
+            <span class="swatch-hex">#F2EDE4</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#9A9186" style="background:#9A9186; color:#131210;">
+            <span class="swatch-name">Subtítulo sobre oscuro</span>
+            <span class="swatch-hex">#9A9186</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#F3EEE6" style="background:#F3EEE6; color:#1A1815; border:1px solid rgba(26,24,21,0.12);">
+            <span class="swatch-name">Fondo claro</span>
+            <span class="swatch-hex">#F3EEE6</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#A9793B" style="background:#A9793B; color:#F3EEE6;">
+            <span class="swatch-name">Acento dorado (sobre claro)</span>
+            <span class="swatch-hex">#A9793B</span>
+          </button>
+          <button class="swatch" type="button" data-hex="#1A1815" style="background:#1A1815; color:#F3EEE6;">
+            <span class="swatch-name">Texto sobre claro</span>
+            <span class="swatch-hex">#1A1815</span>
+          </button>
+        </div>
+
+        <p class="copy-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 4. Reglas de uso -->
+    <section class="section section--alt" aria-labelledby="h-reglas">
+      <div class="wrap">
+        <h2 id="h-reglas">Reglas de uso</h2>
+
+        <div class="rules-grid">
+          <div class="rule-card">
+            <h3>Tamaño mínimo</h3>
+            <p>El ícono no debe reproducirse a menos de <strong>24px</strong> de
+              alto. El lockup completo (ícono + wordmark) no debe bajar de
+              <strong>120px</strong> de ancho — por debajo de eso, usa
+              <code>logo-icon-only.svg</code> solo.</p>
+          </div>
+          <div class="rule-card">
+            <h3>Espacio de protección</h3>
+            <p>Deja siempre un margen libre alrededor del logo de al menos el
+              <strong>grosor de una barra del ícono</strong> (12% de su alto).
+              Ningún texto, borde o imagen debe invadir ese espacio.</p>
+          </div>
+          <div class="rule-card">
+            <h3>Contraste de color</h3>
+            <p>El dorado sobre fondo claro (<code>#A9793B</code> sobre
+              <code>#F3EEE6</code>) da un contraste de ~3.3:1 — válido para
+              títulos grandes o el ícono, pero <strong>no</strong> para texto de
+              cuerpo. Usa siempre <code>#1A1815</code> para párrafos sobre fondo
+              claro.</p>
+          </div>
+        </div>
+
+        <div class="dos-donts">
+          <figure class="example example--correct">
+            <div class="example-preview">
+              <img src="assets/logo/logo-primary-dark.svg" alt="Uso correcto: proporciones originales del logo" loading="lazy">
+            </div>
+            <figcaption><span class="tag tag--ok">Correcto</span> Proporciones originales, sin distorsión</figcaption>
+          </figure>
+
+          <figure class="example example--incorrect">
+            <div class="example-preview">
+              <img src="assets/logo/logo-primary-dark.svg" alt="Uso incorrecto: logo estirado horizontalmente" loading="lazy" class="img-stretched">
+            </div>
+            <figcaption><span class="tag tag--no">Incorrecto</span> No estirar ni deformar el logo</figcaption>
+          </figure>
+
+          <figure class="example example--correct">
+            <div class="example-preview">
+              <img src="assets/logo/logo-icon-only.svg" alt="Uso correcto: acento dorado original" loading="lazy" style="width:96px;">
+            </div>
+            <figcaption><span class="tag tag--ok">Correcto</span> Acento dorado tal como está definido</figcaption>
+          </figure>
+
+          <figure class="example example--incorrect">
+            <div class="example-preview">
+              <img src="assets/logo/logo-icon-only.svg" alt="Uso incorrecto: color de acento cambiado" loading="lazy" class="img-recolored" style="width:96px;">
+            </div>
+            <figcaption><span class="tag tag--no">Incorrecto</span> No cambiar el color del acento</figcaption>
+          </figure>
+
+          <figure class="example example--correct">
+            <div class="example-preview example-preview--darkbg">
+              <img src="assets/logo/logo-monochrome-white.svg" alt="Uso correcto: versión blanca sobre fondo oscuro con buen contraste" loading="lazy">
+            </div>
+            <figcaption><span class="tag tag--ok">Correcto</span> Buen contraste con el fondo</figcaption>
+          </figure>
+
+          <figure class="example example--incorrect">
+            <div class="example-preview example-preview--lowcontrast">
+              <img src="assets/logo/logo-monochrome-white.svg" alt="Uso incorrecto: logo blanco sobre fondo claro, bajo contraste" loading="lazy">
+            </div>
+            <figcaption><span class="tag tag--no">Incorrecto</span> No usar sobre fondos de bajo contraste</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img src="assets/logo/logo-compact.svg" alt="NOVAHAUS" class="footer-logo" width="120" height="30">
+      <p>© 2026 NovaHaus. Arquitectura · Interiorismo.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
