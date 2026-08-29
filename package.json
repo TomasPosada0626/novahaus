@@ -1,0 +1,16 @@
+{
+  "name": "novahaus-brand",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NovaHaus brand assets (logo SVGs, favicon package) and brand guidelines page.",
+  "scripts": {
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "@fontsource/manrope": "^5.3.0",
+    "fontkit": "^2.0.4",
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.33.5"
+  }
+}
