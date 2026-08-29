@@ -50,6 +50,12 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <picture class="hero-bg" aria-hidden="true">
+        <source srcset="assets/hero-bg.webp" type="image/webp">
+        <img src="assets/hero-bg.jpg" alt="" loading="eager" fetchpriority="high">
+      </picture>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
       <div class="wrap hero-row">
         <div class="hero-copy">
           <p class="eyebrow">Arquitectura con propósito</p>
@@ -67,10 +73,6 @@
             <a class="btn-solid" href="#contacto">Agendar asesoría <span aria-hidden="true">→</span></a>
             <a class="btn-text" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
           </div>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <img src="hero-illustration.svg" alt="">
         </div>
       </div>
     </section>
