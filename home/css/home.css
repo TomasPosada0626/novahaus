@@ -292,20 +292,18 @@ a { color: inherit; }
   grid-template-columns: 1fr;
 }
 .philosophy-art {
-  min-height: 320px;
-  background:
-    radial-gradient(ellipse 60% 80% at 30% 40%, rgba(199,164,104,0.16), transparent 70%),
-    linear-gradient(120deg, #1c1a16, #0e0d0b 65%);
+  display: block;
+  aspect-ratio: 4 / 3;
   position: relative;
   overflow: hidden;
+  background: #0e0d0b;
 }
-.philosophy-art::before {
-  content: "";
+.philosophy-art img {
   position: absolute;
-  top: 8%; bottom: 8%; left: 38%;
-  width: 6px;
-  background: linear-gradient(180deg, transparent, rgba(199,164,104,0.55), transparent);
-  filter: blur(2px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .philosophy-copy {
   padding: 56px 24px;
@@ -322,7 +320,7 @@ a { color: inherit; }
 
 @media (min-width: 980px) {
   .philosophy-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
-  .philosophy-art { min-height: 100%; }
+  .philosophy-art { aspect-ratio: auto; }
   .philosophy-copy { padding: 88px 64px; margin: 0; max-width: none; display: flex; flex-direction: column; justify-content: center; }
 }
 
@@ -454,22 +452,29 @@ a { color: inherit; }
   gap: 32px;
   margin-top: 40px;
 }
-.team-avatar {
-  width: 60px; height: 60px;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
+.team-photo {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 220px;
 }
+.team-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .team-card { min-width: 0; }
 .team-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 4px; }
 .team-role { color: var(--gold); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px; }
-.team-card p:not(.team-role) { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.team-card p:not(.team-role) { color: var(--muted); font-size: 0.92rem; margin: 0 0 14px; }
+.team-card p:not(.team-role):last-child { margin-bottom: 0; }
+.team-pillars {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team-pillars li { color: var(--muted); font-size: 0.92rem; }
+.team-pillars strong { color: var(--cream); font-weight: 700; }
 
 @media (min-width: 700px) {
   .team-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
