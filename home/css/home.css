@@ -348,9 +348,33 @@ a { color: inherit; }
   background: rgba(242, 237, 228, 0.03);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 32px 28px;
+  overflow: hidden;
 }
-.service-icon { width: 30px; height: 30px; color: var(--gold); margin-bottom: 22px; }
+.service-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #0e0d0b;
+}
+.service-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.service-icon {
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  box-sizing: border-box;
+  color: var(--gold);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+.service-body { padding: 32px 28px; }
 .service-card h3 { font-family: var(--font-serif); font-weight: 600; font-size: 1.25rem; margin: 0 0 12px; }
 .service-card p { color: var(--muted); margin: 0 0 20px; font-size: 0.95rem; }
 
