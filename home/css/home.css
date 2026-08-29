@@ -245,47 +245,6 @@ a { color: inherit; }
   .hero { min-height: 88vh; padding: 140px 0 80px; }
 }
 
-/* ---------- Stats ---------- */
-.stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  align-items: center;
-}
-.stat-number {
-  font-family: var(--font-serif);
-  font-size: 1.7rem;
-  margin: 0 0 4px;
-}
-.stat-label {
-  margin: 0;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
-.stat-phone {
-  justify-self: end;
-  width: 52px; height: 52px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-.stat-phone svg { width: 20px; height: 20px; }
-.stat-phone:hover, .stat-phone:focus-visible { background: var(--gold); color: var(--bg); }
-
-@media (min-width: 700px) {
-  .stats-row { grid-template-columns: repeat(3, 1fr) auto; gap: 40px; }
-}
-
 /* ---------- Philosophy ---------- */
 .philosophy-grid {
   display: grid;
