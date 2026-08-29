@@ -1,8 +1,8 @@
-# NovaHaus — Brand Assets
+# NovaHaus — Brand Assets & Sitio
 
-Paquete de identidad de marca de NovaHaus (arquitectura e interiorismo):
-logotipo en 6 variantes SVG, paquete de favicon/PWA, y una página estática
-de brand guidelines (`index.html`) que documenta el uso correcto de la marca.
+Identidad de marca de NovaHaus (arquitectura e interiorismo): logotipo en 6
+variantes SVG, paquete de favicon/PWA, una página de brand guidelines
+(`index.html`), y la home pública del sitio (`home/index.html`).
 
 ## Estructura
 
@@ -13,13 +13,39 @@ assets/
                        icon-192.png, icon-512.png, site.webmanifest
 css/styles.css        estilos de la página de guidelines (CSS plano)
 js/main.js            copiar hex al portapapeles en la sección de paleta
+index.html            la página de brand guidelines (mini brand book interno)
+
+home/
+  index.html          home pública de NovaHaus (hero, servicios, IA, proceso,
+                       proyectos, equipo, contacto)
+  css/home.css        estilos de la home (CSS plano, mobile-first)
+  js/home.js          toggle del menú móvil
+  assets/
+    hero-bg.jpg / .webp     render del hero, optimizado (~90KB)
+    hero-bg-source.png      render original sin comprimir (fuente)
+
 scripts/
   generate-logos.mjs        genera los 6 SVG del logo a partir del monograma
                              maestro y los outlines reales de Manrope
   generate-icons.mjs        genera el paquete de favicon desde logo-icon-only.svg
   build-wordmark-paths.mjs  utilidad para inspeccionar los paths de texto generados
-index.html            la página de brand guidelines
+  generate-hero-illustration.mjs  ilustración wireframe alternativa (no usada
+                             actualmente en home/, queda como opción de respaldo)
 ```
+
+## Pendiente en `home/`
+
+Las secciones **Proyectos** y **Equipo** usan arte/avatares placeholder
+(gradientes de marca e iniciales) porque aún no hay fotos reales de proyectos
+terminados. Para reemplazarlos:
+
+- **Equipo**: cambia el `<div class="team-avatar">AR</div>` (y las otras dos)
+  por una foto real; ver `home/index.html`, sección `#nosotros`.
+- **Proyectos**: cambia el `<div class="project-art project-art--N">` por un
+  `<img>` con la foto del proyecto; ver `home/index.html`, sección `#proyectos`.
+
+El copy de la sección "Proceso" es un borrador razonable (el sitio original
+no tenía uno) — confírmalo o ajústalo antes de publicar.
 
 ## Variantes del logo
 

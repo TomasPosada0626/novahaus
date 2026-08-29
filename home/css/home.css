@@ -94,7 +94,7 @@ a { color: inherit; }
 }
 .btn-outline:hover, .btn-outline:focus-visible { background: var(--gold); color: var(--bg); }
 
-.btn-text { color: var(--cream); border-bottom: 1px solid var(--border); padding-bottom: 3px; }
+.btn-text { color: var(--cream); border-bottom: 1px solid var(--border); padding-bottom: 3px; white-space: normal; }
 .btn-text:hover, .btn-text:focus-visible { color: var(--gold); border-color: var(--gold); }
 
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
@@ -324,4 +324,189 @@ a { color: inherit; }
   .philosophy-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
   .philosophy-art { min-height: 100%; }
   .philosophy-copy { padding: 88px 64px; margin: 0; max-width: none; display: flex; flex-direction: column; justify-content: center; }
+}
+
+/* ---------- Generic sections ---------- */
+.section { padding: 72px 0; }
+.section--alt { background: var(--bg-raised); }
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
+  line-height: 1.18;
+  margin: 0 0 20px;
+}
+.section-lede { color: var(--muted); max-width: 56ch; font-size: 1.02rem; margin: 0 0 40px; }
+
+/* ---------- Servicios ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.service-card {
+  min-width: 0;
+  background: rgba(242, 237, 228, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+}
+.service-icon { width: 30px; height: 30px; color: var(--gold); margin-bottom: 22px; }
+.service-card h3 { font-family: var(--font-serif); font-weight: 600; font-size: 1.25rem; margin: 0 0 12px; }
+.service-card p { color: var(--muted); margin: 0 0 20px; font-size: 0.95rem; }
+
+@media (min-width: 700px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Ventaja / IA ---------- */
+.advantage-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+.advantage-copy .section-lede { margin-bottom: 0; }
+.advantage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.advantage-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  font-size: 1.02rem;
+}
+.advantage-list li:last-child { border-bottom: 1px solid var(--border); }
+.advantage-index {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  width: 2ch;
+}
+
+@media (min-width: 900px) {
+  .advantage-grid { grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+}
+
+/* ---------- Proceso ---------- */
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  margin-top: 40px;
+}
+.process-index {
+  display: block;
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+.process-step { min-width: 0; }
+.process-step h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 10px; }
+.process-step p { color: var(--muted); margin: 0; font-size: 0.94rem; }
+
+@media (min-width: 700px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 44px; }
+}
+@media (min-width: 1100px) {
+  .process-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Proyectos ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.project-card { margin: 0; min-width: 0; }
+.project-art {
+  border-radius: 14px;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #201d18, #0e0d0b 70%);
+}
+.project-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at var(--glow-x, 30%) var(--glow-y, 30%), rgba(199,164,104,0.22), transparent 70%);
+}
+.project-art--1 { --glow-x: 25%; --glow-y: 30%; }
+.project-art--2 { --glow-x: 70%; --glow-y: 60%; }
+.project-art--3 { --glow-x: 50%; --glow-y: 20%; }
+.project-card h3 { font-family: var(--font-serif); font-weight: 600; font-size: 1.15rem; margin: 0 0 4px; }
+.project-card p { color: var(--muted); margin: 0; font-size: 0.88rem; }
+
+@media (min-width: 700px) {
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Equipo ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+.team-avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.team-card { min-width: 0; }
+.team-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 4px; }
+.team-role { color: var(--gold); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px; }
+.team-card p:not(.team-role) { color: var(--muted); font-size: 0.92rem; margin: 0; }
+
+@media (min-width: 700px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+}
+
+/* ---------- CTA final ---------- */
+.cta-final {
+  text-align: center;
+  padding: 88px 0;
+  border-top: 1px solid var(--border);
+}
+.cta-final .eyebrow, .cta-final .section-lede { margin-left: auto; margin-right: auto; }
+.cta-final .section-title { margin-left: auto; margin-right: auto; }
+.cta-actions { justify-content: center; margin-bottom: 28px; }
+.cta-location { color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--border); }
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-nav { display: flex; flex-wrap: wrap; gap: 20px; }
+.footer-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.footer-nav a:hover, .footer-nav a:focus-visible { color: var(--gold); }
+.footer-copy { color: var(--muted); font-size: 0.78rem; margin: 0; }
+
+@media (min-width: 700px) {
+  .footer-row { flex-direction: row; align-items: center; justify-content: space-between; }
 }
