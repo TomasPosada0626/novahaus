@@ -42,8 +42,8 @@ async function main() {
   console.log("wrote favicon.svg (copy of logo-icon-only.svg)");
 
   const manifest = {
-    name: "NovaHaus",
-    short_name: "NovaHaus",
+    name: "RenovHaus",
+    short_name: "RenovHaus",
     icons: [
       { src: "icon-192.png", sizes: "192x192", type: "image/png" },
       { src: "icon-512.png", sizes: "512x512", type: "image/png" },

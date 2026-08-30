@@ -1,8 +1,8 @@
 {
-  "name": "novahaus-brand",
+  "name": "renovhaus-brand",
   "version": "1.0.0",
   "private": true,
-  "description": "NovaHaus brand assets (logo SVGs, favicon package) and brand guidelines page.",
+  "description": "RenovHaus brand assets (logo SVGs, favicon package) and brand guidelines page.",
   "scripts": {
     "generate-icons": "node scripts/generate-icons.mjs",
     "serve": "npx --yes serve ."

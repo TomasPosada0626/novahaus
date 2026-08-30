@@ -1,6 +1,6 @@
-# NovaHaus — Brand Assets & Sitio
+# RenovHaus — Brand Assets & Sitio
 
-Identidad de marca de NovaHaus (arquitectura e interiorismo): logotipo en 6
+Identidad de marca de RenovHaus (arquitectura e interiorismo): logotipo en 6
 variantes SVG, paquete de favicon/PWA, una página de brand guidelines
 (`index.html`), y la home pública del sitio (`home/index.html`).
 
@@ -13,39 +13,45 @@ assets/
                        icon-192.png, icon-512.png, site.webmanifest
 css/styles.css        estilos de la página de guidelines (CSS plano)
 js/main.js            copiar hex al portapapeles en la sección de paleta
-index.html            la página de brand guidelines (mini brand book interno)
+index.html            la página de brand guidelines (mini brand book interno,
+                       tema oscuro)
 
 home/
-  index.html          home pública de NovaHaus (hero, servicios, IA, proceso,
-                       proyectos, equipo, contacto)
+  index.html          home pública (hero, filosofía, servicios, IA, proceso,
+                       equipo, contacto) -- tema claro
   css/home.css        estilos de la home (CSS plano, mobile-first)
   js/home.js          toggle del menú móvil
   assets/
-    hero-bg.jpg / .webp     render del hero, optimizado (~90KB)
-    hero-bg-source.png      render original sin comprimir (fuente)
+    hero-sketch.jpg / .webp   sketch arquitectónico usado como fondo del hero
+    team/andres.jpg, margarita.jpg, mery.jpg (+ .webp)   fotos reales del equipo
+    *-source.png        originales sin comprimir de cada foto activa
 
 scripts/
   generate-logos.mjs        genera los 6 SVG del logo a partir del monograma
-                             maestro y los outlines reales de Manrope
+                             maestro (la "R") y los outlines reales de Manrope
   generate-icons.mjs        genera el paquete de favicon desde logo-icon-only.svg
   build-wordmark-paths.mjs  utilidad para inspeccionar los paths de texto generados
   generate-hero-illustration.mjs  ilustración wireframe alternativa (no usada
-                             actualmente en home/, queda como opción de respaldo)
+                             actualmente, queda como opción de respaldo)
 ```
 
-## Pendiente en `home/`
+**Archivos huérfanos**: `home/assets/hero-bg.*` (el hero fotográfico oscuro
+original), `home/assets/philosophy.*` y `home/assets/services/*` (fotos que
+se quitaron de Filosofía y Servicios) ya no están referenciados desde
+`home/index.html`, pero se dejaron en el repo por si se quieren reusar.
+Bórralos si prefieres mantener `assets/` limpio.
 
-Las secciones **Proyectos** y **Equipo** usan arte/avatares placeholder
-(gradientes de marca e iniciales) porque aún no hay fotos reales de proyectos
-terminados. Para reemplazarlos:
+## La home (`home/index.html`) es tema claro
 
-- **Equipo**: cambia el `<div class="team-avatar">AR</div>` (y las otras dos)
-  por una foto real; ver `home/index.html`, sección `#nosotros`.
-- **Proyectos**: cambia el `<div class="project-art project-art--N">` por un
-  `<img>` con la foto del proyecto; ver `home/index.html`, sección `#proyectos`.
+Fondo `#F3EEE6`, texto `#1A1815`, dorado `#A9793B` — el lado claro de la
+paleta ya aprobada (ver más abajo). El brand book (`index.html`, raíz) se
+quedó en el tema oscuro original; son dos piezas independientes.
 
-El copy de la sección "Proceso" es un borrador razonable (el sitio original
-no tenía uno) — confírmalo o ajústalo antes de publicar.
+**Regla de contraste que ya está aplicada**: el dorado sobre fondo claro da
+~3.3:1, que cumple WCAG AA solo para texto grande (≥24px) o elementos
+gráficos (íconos, bordes), no para texto de cuerpo ni estados de hover en
+texto pequeño. Por eso en `home.css` los enlaces/labels pequeños usan tinta
+oscura + subrayado dorado en vez de texto dorado.
 
 ## Variantes del logo
 
@@ -60,7 +66,9 @@ no tenía uno) — confírmalo o ajústalo antes de publicar.
 
 Todos son SVG con paths reales (no `<text>`, no imágenes rasterizadas), así
 que se abren y editan directamente en Figma, Illustrator o cualquier editor
-de código.
+de código. El monograma es una "R" geométrica (barra + ojal rectangular +
+diagonal de salida) construida en la misma grilla de 100 unidades que el
+diseño original: margen 18%, trazo 12%, radio de esquina 8%.
 
 ## Regenerar los assets
 
@@ -76,8 +84,8 @@ node scripts/generate-logos.mjs   # regenera los 6 SVG del logo
 
 `node_modules` y las dependencias de npm (`sharp`, `png-to-ico`, `fontkit`,
 `@fontsource/manrope`) solo se usan en build time para estos scripts — el
-sitio publicado (`index.html`, `css/`, `js/`, `assets/`) es HTML/CSS/JS plano,
-sin build step ni dependencias en producción.
+sitio publicado (`index.html`, `home/`, `css/`, `js/`, `assets/`) es
+HTML/CSS/JS plano, sin build step ni dependencias en producción.
 
 ## Servir localmente
 
@@ -85,17 +93,18 @@ sin build step ni dependencias en producción.
 npm run serve
 ```
 
-o simplemente abre `index.html` en el navegador.
+y abre `index.html` (brand book) o `home/index.html` (home pública) en el
+navegador.
 
 ## Paleta
 
 | Color | Hex | Uso |
 |---|---|---|
-| Fondo oscuro | `#131210` | Fondo principal |
+| Fondo oscuro | `#131210` | Fondo del brand book |
 | Acento dorado (sobre oscuro) | `#C7A468` | Ícono / detalles sobre fondo oscuro |
 | Texto sobre oscuro | `#F2EDE4` | Texto principal sobre fondo oscuro |
 | Subtítulo sobre oscuro | `#9A9186` | Subtítulo, uppercase, tracking amplio |
-| Fondo claro | `#F3EEE6` | Fondo alternativo |
+| Fondo claro | `#F3EEE6` | Fondo de la home pública |
 | Acento dorado (sobre claro) | `#A9793B` | Ícono / títulos grandes sobre fondo claro (ver nota de contraste) |
 | Texto sobre claro | `#1A1815` | Texto principal sobre fondo claro |
 
@@ -106,6 +115,6 @@ sección "Reglas de uso" de `index.html`.
 
 ## Licencia de uso
 
-Estos assets son propiedad de NovaHaus. Uso interno y de partners
+Estos assets son propiedad de RenovHaus. Uso interno y de partners
 autorizados para materiales de marca; no redistribuir ni modificar el
 monograma o la paleta sin aprobación.

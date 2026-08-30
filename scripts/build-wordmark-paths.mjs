@@ -83,7 +83,7 @@ function textToPath(fontFile, text, fontSize, trackingEm = 0) {
 
 const wordmark = textToPath(
   "manrope-latin-800-normal.woff",
-  "NOVAHAUS",
+  "RENOVHAUS",
   48,
   0.045
 );

@@ -1,4 +1,4 @@
-// Generates the 6 NovaHaus logo SVG files from a single master monogram
+// Generates the 6 RenovHaus logo SVG files from a single master monogram
 // definition (100-unit coordinate space) and real Manrope glyph outlines
 // (via fontkit) for the wordmark/subtitle text -- no <text> elements, no
 // rasterized text, just paths. Run with: node scripts/generate-logos.mjs
@@ -30,13 +30,17 @@ const COLOR = {
 };
 
 // --- Master monogram, drawn once in a 100x100 unit box -------------------
-// Square frame, rx = 8 (8% of 100, per brand spec). Two vertical stems +
-// a connecting diagonal, all 12 units thick (12%), 18-unit margins.
+// Square frame, rx = 8 (8% of 100, per brand spec). Geometric "R": a full
+// stem, a rectangular bowl (top/right/bottom bars, open counter), and a
+// diagonal leg -- same 12-unit stroke thickness and 18-unit margins as the
+// original N, so it reads as the same construction system.
 const FRAME_RX = 8;
 const MONOGRAM_D =
   "M18,18 H30 V82 H18 Z " +
-  "M30,18 L42,18 L70,82 L58,82 Z " +
-  "M70,18 H82 V82 H70 Z";
+  "M30,18 H70 V30 H30 Z " +
+  "M58,18 H70 V52 H58 Z " +
+  "M30,40 H70 V52 H30 Z " +
+  "M46,52 L58,52 L82,82 L70,82 Z";
 const FRAME_STROKE_WIDTH = 4; // used only for outline (monochrome) treatment
 
 // --- Text-to-path (real Manrope outlines, not <text>) ---------------------
@@ -86,7 +90,7 @@ function textToPath(fontFile, text, fontSize, trackingEm = 0) {
   return { d: dParts.join(" "), width: r(x - tracking), capHeight: r(font.capHeight * scale) };
 }
 
-const wordmark = textToPath("manrope-latin-800-normal.woff", "NOVAHAUS", 48, 0.045);
+const wordmark = textToPath("manrope-latin-800-normal.woff", "RENOVHAUS", 48, 0.045);
 const subtitle = textToPath("manrope-latin-600-normal.woff", "ARQUITECTURA · INTERIORISMO", 13, 0.14);
 
 // --- Layout constants -------------------------------------------------
@@ -94,7 +98,7 @@ const ICON = 64; // rendered icon size in composed lockups
 const ICON_SCALE = ICON / 100;
 
 function svgOpen(w, h) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="NOVAHAUS">`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="RENOVHAUS">`;
 }
 
 function frameRect(fill) {
