@@ -14,11 +14,15 @@ const OUT_DIR = path.join(ROOT, "assets", "logo");
 
 const COLOR = {
   bgDark: "#131210",
-  goldOnDark: "#C7A468",
+  // Medium-dark olive green accent, replacing the original gold. Two shades
+  // for the same reason gold needed two: oliveOnLight (~5.15:1 on #F3EEE6)
+  // is the canonical "verde oliva medio oscuro"; oliveOnDark is a lighter
+  // moss tone kept legible (~7.6:1) against the near-black background.
+  oliveOnDark: "#9CAD5E",
   textOnDark: "#F2EDE4",
   subtitleOnDark: "#9A9186",
   bgLight: "#F3EEE6",
-  goldOnLight: "#A9793B",
+  oliveOnLight: "#556B2F",
   textOnLight: "#1A1815",
   // Derived neutral for the light-background lockup's subtitle. Not part of
   // the approved 7-color palette (the brief only specified a dark-bg
@@ -111,10 +115,11 @@ function monogram(fill) {
   return `<path d="${MONOGRAM_D}" fill="${fill}"/>`;
 }
 
-// 1) Icon only -----------------------------------------------------------
+// 1) Icon only -- beige frame (matches the surrounding light palette) with
+// an olive R, per brand direction (favicon/avatar use, light theme).
 const iconOnly = `${svgOpen(100, 100)}
-  ${frameRect(COLOR.bgDark)}
-  ${monogram(COLOR.goldOnDark)}
+  ${frameRect(COLOR.bgLight)}
+  ${monogram(COLOR.oliveOnLight)}
 </svg>
 `;
 
@@ -144,7 +149,7 @@ const primaryDark = (() => {
   const PAD = 32;
   const inner = primaryLockup({
     bg: COLOR.bgDark,
-    gold: COLOR.goldOnDark,
+    gold: COLOR.oliveOnDark,
     text: COLOR.textOnDark,
     subtitleColor: COLOR.subtitleOnDark,
   });
@@ -155,7 +160,7 @@ const primaryDark = (() => {
 const primaryLight = (() => {
   const inner = primaryLockup({
     bg: COLOR.bgLight,
-    gold: COLOR.goldOnLight,
+    gold: COLOR.oliveOnLight,
     text: COLOR.textOnLight,
     subtitleColor: COLOR.subtitleOnLight,
   });
@@ -175,7 +180,7 @@ const compact = (() => {
   return `${svgOpen(width, height)}
   <rect width="100%" height="100%" fill="${COLOR.bgDark}"/>
   <g transform="translate(${PAD},${PAD}) scale(${ICON_SCALE})">
-    ${monogram(COLOR.goldOnDark)}
+    ${monogram(COLOR.oliveOnDark)}
   </g>
   <path d="${wordmark.d}" fill="${COLOR.textOnDark}" transform="translate(${textX},${r(wmBaselineY)})"/>
 </svg>

@@ -41,17 +41,18 @@ se quitaron de Filosofía y Servicios) ya no están referenciados desde
 `home/index.html`, pero se dejaron en el repo por si se quieren reusar.
 Bórralos si prefieres mantener `assets/` limpio.
 
-## La home (`home/index.html`) es tema claro
+## Paleta: fondo claro + acento verde oliva
 
-Fondo `#F3EEE6`, texto `#1A1815`, dorado `#A9793B` — el lado claro de la
-paleta ya aprobada (ver más abajo). El brand book (`index.html`, raíz) se
-quedó en el tema oscuro original; son dos piezas independientes.
+Ambas páginas usan el lado claro de la paleta como base (`#F3EEE6` de fondo,
+`#1A1815` de texto), con bandas oscuras puntuales (hero y footer del brand
+book). El acento ya no es dorado — es **verde oliva** (`#556B2F` sobre fondo
+claro, `#9CAD5E` sobre fondo oscuro).
 
-**Regla de contraste que ya está aplicada**: el dorado sobre fondo claro da
-~3.3:1, que cumple WCAG AA solo para texto grande (≥24px) o elementos
-gráficos (íconos, bordes), no para texto de cuerpo ni estados de hover en
-texto pequeño. Por eso en `home.css` los enlaces/labels pequeños usan tinta
-oscura + subrayado dorado en vez de texto dorado.
+**Regla de contraste**: el verde oliva sobre fondo claro da ~5.15:1, que
+cumple WCAG AA incluso para texto de cuerpo (mejor que el dorado original,
+que solo llegaba a ~3.3:1). Aun así, en `home.css` los enlaces/labels
+pequeños siguen usando tinta oscura + subrayado en verde oliva, en vez de
+texto de color, por consistencia con ese patrón ya establecido.
 
 ## Variantes del logo
 
@@ -100,18 +101,17 @@ navegador.
 
 | Color | Hex | Uso |
 |---|---|---|
-| Fondo oscuro | `#131210` | Fondo del brand book |
-| Acento dorado (sobre oscuro) | `#C7A468` | Ícono / detalles sobre fondo oscuro |
+| Fondo oscuro | `#131210` | Hero y footer del brand book |
+| Acento verde oliva (sobre oscuro) | `#9CAD5E` | Ícono / detalles sobre fondo oscuro |
 | Texto sobre oscuro | `#F2EDE4` | Texto principal sobre fondo oscuro |
 | Subtítulo sobre oscuro | `#9A9186` | Subtítulo, uppercase, tracking amplio |
-| Fondo claro | `#F3EEE6` | Fondo de la home pública |
-| Acento dorado (sobre claro) | `#A9793B` | Ícono / títulos grandes sobre fondo claro (ver nota de contraste) |
+| Fondo claro | `#F3EEE6` | Fondo principal de ambas páginas |
+| Acento verde oliva (sobre claro) | `#556B2F` | Ícono / títulos grandes sobre fondo claro (ver nota de contraste) |
 | Texto sobre claro | `#1A1815` | Texto principal sobre fondo claro |
 
-**Nota de contraste**: `#A9793B` sobre `#F3EEE6` da ~3.3:1 — cumple WCAG AA
-solo para texto grande (≥24px) o elementos gráficos, no para texto de cuerpo.
-Usa siempre `#1A1815` para párrafos sobre fondo claro. Detalle completo en la
-sección "Reglas de uso" de `index.html`.
+**Nota de contraste**: `#556B2F` sobre `#F3EEE6` da ~5.15:1 — cumple WCAG AA
+incluso para texto de cuerpo. Detalle completo en la sección "Reglas de uso"
+de `index.html`.
 
 ## Licencia de uso
 

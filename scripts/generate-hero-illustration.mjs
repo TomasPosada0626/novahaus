@@ -97,7 +97,7 @@ function polyD(points) {
   return `M${pts[0][0]},${pts[0][1]} ` + pts.slice(1).map((p) => `L${p[0]},${p[1]}`).join(" ") + " Z";
 }
 
-const GOLD = "#C7A468";
+const GOLD = "#9CAD5E"; // olive accent (kept the GOLD name -- unused backup script)
 const CREAM = "#F2EDE4";
 
 let svg = "";

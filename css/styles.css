@@ -1,11 +1,11 @@
 :root {
   --bg-dark: #131210;
-  --gold-on-dark: #C7A468;
+  --accent-on-dark: #9CAD5E;
   --text-on-dark: #F2EDE4;
   --subtitle-on-dark: #9A9186;
 
   --bg-light: #F3EEE6;
-  --gold-on-light: #A9793B;
+  --accent-on-light: #556B2F;
   --text-on-light: #1A1815;
 
   --font-sans: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -39,7 +39,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--gold-on-dark);
+  background: var(--accent-on-dark);
   color: var(--bg-dark);
   padding: 10px 16px;
   z-index: 100;
@@ -116,7 +116,7 @@ code {
   margin-right: 8px;
   vertical-align: middle;
 }
-.dot--gold { background: var(--gold-on-light); }
+.dot--olive { background: var(--accent-on-light); }
 .dot--cream { background: var(--text-on-light); opacity: 0.55; }
 
 @media (min-width: 760px) {
@@ -182,7 +182,7 @@ code {
   transition: background-color 0.15s ease;
 }
 .btn-download:hover, .btn-download:focus-visible { background: #2B2822; }
-.btn-download:focus-visible { outline: 2px solid var(--gold-on-light); outline-offset: 2px; }
+.btn-download:focus-visible { outline: 2px solid var(--accent-on-light); outline-offset: 2px; }
 
 /* ---------- Palette swatches ---------- */
 .swatch-grid {
@@ -210,7 +210,7 @@ code {
   transition: transform 0.12s ease;
 }
 .swatch:hover { transform: translateY(-2px); }
-.swatch:focus-visible { outline: 3px solid var(--gold-on-light); outline-offset: 2px; }
+.swatch:focus-visible { outline: 3px solid var(--accent-on-light); outline-offset: 2px; }
 .swatch-name { font-size: 0.78rem; opacity: 0.92; }
 .swatch-hex { font-weight: 800; font-size: 1.05rem; letter-spacing: 0.02em; }
 
@@ -218,8 +218,8 @@ code {
   min-height: 1.4em;
   margin-top: 16px;
   font-weight: 700;
-  /* text-on-light, not gold-on-light: this is normal-size status text and
-     the darker gold only clears WCAG AA at large sizes (~3.3:1) */
+  /* text-on-light: the olive accent now clears AA even at normal size
+     (~5.15:1), but this status text stays ink for max legibility */
   color: var(--text-on-light);
 }
 
