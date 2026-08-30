@@ -13,18 +13,21 @@ assets/
                        icon-192.png, icon-512.png, site.webmanifest
 css/styles.css        estilos de la página de guidelines (CSS plano)
 js/main.js            copiar hex al portapapeles en la sección de paleta
-index.html            la página de brand guidelines (mini brand book interno,
-                       tema oscuro)
+index.html            la página de brand guidelines (mini brand book interno)
 
 home/
   index.html          home pública (hero, filosofía, servicios, IA, proceso,
-                       equipo, contacto) -- tema claro
+                       equipo, contacto)
   css/home.css        estilos de la home (CSS plano, mobile-first)
   js/home.js          toggle del menú móvil
   assets/
-    hero-sketch.jpg / .webp   sketch arquitectónico usado como fondo del hero
-    team/andres.jpg, margarita.jpg, mery.jpg (+ .webp)   fotos reales del equipo
-    *-source.png        originales sin comprimir de cada foto activa
+    photos/
+      hero.jpg / .webp (+ -source.png)          sketch arquitectónico del hero
+      philosophy.jpg / .webp (+ -source.png)     foto de "Nuestra filosofía"
+      services/
+        cultura.jpg / .webp (+ -source.png)        card "Cultura Central"
+        estancias.jpg / .webp (+ -source.png)      card "Estancias de corta duración"
+        remodelacion.jpg / .webp (+ -source.png)   card "Remodelación residencial"
 
 scripts/
   generate-logos.mjs        genera los 6 SVG del logo a partir del monograma
@@ -35,11 +38,9 @@ scripts/
                              actualmente, queda como opción de respaldo)
 ```
 
-**Archivos huérfanos**: `home/assets/hero-bg.*` (el hero fotográfico oscuro
-original), `home/assets/philosophy.*` y `home/assets/services/*` (fotos que
-se quitaron de Filosofía y Servicios) ya no están referenciados desde
-`home/index.html`, pero se dejaron en el repo por si se quieren reusar.
-Bórralos si prefieres mantener `assets/` limpio.
+El equipo (`#nosotros`) usa avatares de iniciales, no fotos — se quitaron
+las fotos reales del equipo por decisión de contenido; el texto de las
+biografías se mantiene completo.
 
 ## Paleta: fondo claro + acento verde oliva
 

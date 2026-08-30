@@ -245,6 +245,44 @@ a { color: inherit; }
   .hero { min-height: 88vh; padding: 140px 0 80px; }
 }
 
+/* ---------- Philosophy ---------- */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.philosophy-art {
+  display: block;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-raised);
+}
+.philosophy-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.philosophy-copy {
+  padding: 56px 24px;
+  max-width: 640px;
+}
+.philosophy-copy h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.3rem);
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+.philosophy-text { color: var(--muted); max-width: 46ch; margin: 0 0 26px; }
+
+@media (min-width: 980px) {
+  .philosophy-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .philosophy-art { aspect-ratio: auto; }
+  .philosophy-copy { padding: 88px 64px; margin: 0; max-width: none; display: flex; flex-direction: column; justify-content: center; }
+}
+
 /* ---------- Generic sections ---------- */
 .section { padding: 72px 0; }
 .section--alt { background: var(--bg-raised); }
@@ -269,9 +307,33 @@ a { color: inherit; }
   background: #FFFFFF;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 32px 28px;
+  overflow: hidden;
 }
-.service-icon { width: 30px; height: 30px; color: var(--accent); margin-bottom: 22px; }
+.service-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-raised);
+}
+.service-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.service-icon {
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  box-sizing: border-box;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+.service-body { padding: 32px 28px; }
 .service-card h3 { font-family: var(--font-serif); font-weight: 600; font-size: 1.25rem; margin: 0 0 12px; }
 .service-card p { color: var(--muted); margin: 0 0 20px; font-size: 0.95rem; }
 
@@ -342,14 +404,18 @@ a { color: inherit; }
   gap: 32px;
   margin-top: 40px;
 }
-.team-photo {
-  display: block;
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  max-width: 220px;
+.team-avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
 }
-.team-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .team-card { min-width: 0; }
 .team-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 4px; }
 .team-role { color: var(--ink); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 12px; }
