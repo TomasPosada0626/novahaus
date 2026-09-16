@@ -22,25 +22,36 @@ home/
   js/home.js          toggle del menú móvil
   assets/
     photos/
-      hero.jpg / .webp (+ -source.png)          sketch arquitectónico del hero
-      philosophy.jpg / .webp (+ -source.png)     foto de "Nuestra filosofía"
+      hero.jpg / .webp          sketch arquitectónico del hero
+      philosophy.jpg / .webp    foto de "Nuestra filosofía"
       services/
-        cultura.jpg / .webp (+ -source.png)        card "Cultura Central"
-        estancias.jpg / .webp (+ -source.png)      card "Estancias de corta duración"
-        remodelacion.jpg / .webp (+ -source.png)   card "Remodelación residencial"
+        cultura.jpg / .webp        card "Cultura Central"
+        estancias.jpg / .webp      card "Estancias de corta duración"
+        remodelacion.jpg / .webp   card "Remodelación residencial"
 
 scripts/
   generate-logos.mjs        genera los 6 SVG del logo a partir del monograma
                              maestro (la "R") y los outlines reales de Manrope
   generate-icons.mjs        genera el paquete de favicon desde logo-icon-only.svg
   build-wordmark-paths.mjs  utilidad para inspeccionar los paths de texto generados
-  generate-hero-illustration.mjs  ilustración wireframe alternativa (no usada
-                             actualmente, queda como opción de respaldo)
 ```
 
 El equipo (`#nosotros`) usa avatares de iniciales, no fotos — se quitaron
 las fotos reales del equipo por decisión de contenido; el texto de las
 biografías se mantiene completo.
+
+## Enviar un solo archivo al cliente
+
+```bash
+npm run build-standalone
+```
+
+Genera `dist/renovhaus.html`: la home (`home/index.html`) con el CSS, el JS
+y todas las imágenes (favicon, logo, fotos) incrustadas como una sola
+página, sin depender de `home/css/`, `home/js/` ni `home/assets/`. Se abre
+directo con doble clic (`file://`, sin servidor) y pesa ~1.3MB — sirve para
+adjuntarlo en un correo o chat. `dist/` no se sube al repo (está en
+`.gitignore`); se regenera cuando quieras con el comando de arriba.
 
 ## Paleta: fondo claro + acento verde oliva
 

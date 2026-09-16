@@ -5,7 +5,8 @@
   "description": "RenovHaus brand assets (logo SVGs, favicon package) and brand guidelines page.",
   "scripts": {
     "generate-icons": "node scripts/generate-icons.mjs",
-    "serve": "npx --yes serve ."
+    "serve": "npx --yes serve .",
+    "build-standalone": "node scripts/build-standalone.mjs"
   },
   "devDependencies": {
     "@fontsource/manrope": "^5.3.0",
